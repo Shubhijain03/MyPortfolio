@@ -7,7 +7,7 @@ const imageSources = [
   "images/image5.jpeg",
   "images/image6.jpeg",
   "images/image7.jpeg",
-  "images/image8.jpeG"
+  "images/image8.jpeg"
 ];
 
 // Image container

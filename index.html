@@ -3,11 +3,362 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random Hover Images</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Shubhi Jain</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/6fb1a74729.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div id="image-container"></div>
-    <script src="script.js"></script>
+    <div class="nav-div">
+      <nav>
+        <p>{SJ}.</p>
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#internship">Internships</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contacts">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+    </div>
+    <div class="scroll-container">
+      <div id="header">
+        <div id="image-container"></div>
+        <script src="script.js"></script>
+        <div class="container">
+          <div class="heading">
+            <div class="header-text">
+              <p class="slide-up">Web-Developer</p>
+              <h1 class="slide-up">
+                I'm <span>Shubhi Jain </span><br />
+                from Bengaluru
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- -------------about----------- -->
+      <div id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <img src="images/Shubhi_Jain .JPG" />
+            </div>
+            <div class="about-col-2">
+              <h1 class="sub-title">About</h1>
+              <p>
+                I'm a final-year Bachelor of Computer Applications (BCA) student
+                at CHRIST (Deemed to be University), Bengaluru, with a passion
+                for Web Development and Data Analysis. I'm a quick learner,
+                always eager to explore new technologies and take on challenges.
+                My strong analytical skills help me develop innovative
+                solutions, and I excel in collaborative settings. As an active
+                member of the Computer Science Association, I thrive in working
+                with others to achieve shared goals.
+              </p>
+
+              <div class="tab-titles">
+                <p
+                  class="tab-links active-link"
+                  onclick="opentab('experience', event)"
+                >
+                  Experience
+                </p>
+                <p class="tab-links" onclick="opentab('education', event)">
+                  Education
+                </p>
+              </div>
+              <div class="tab-contents active-tab" id="experience">
+                <ul>
+                  <li>
+                    <span>Web Development</span><br />Developing Web Apps in
+                    University
+                  </li>
+                  <li>
+                    <span>App Development</span><br />Building Android Apps in
+                    University
+                  </li>
+                  <li><span>UI/UX</span><br />Designing Web/App interfaces</li>
+                </ul>
+              </div>
+
+              <div class="tab-contents" id="education">
+                <ul>
+                  <li>
+                    <span>2022 - Current</span><br />BCA From CHRIST University,
+                    Bengaluru
+                  </li>
+                  <li>
+                    <span>2022 </span><br />Higher Secondary From The Aditya
+                    Birla Public School
+                  </li>
+                  <li>
+                    <span>2020 </span><br />Secondary School From The Aditya
+                    Birla Public School
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- -------------Projects----------- -->
+      <div id="projects">
+        <div class="container">
+          <h1 class="sub-title">Projects</h1>
+          <div class="projects-list">
+            <div>
+              <i class="fa-solid fa-code"></i>
+              <h2>Querit: Connect, Collaborate, Curate</h2>
+              <p>
+                Querit connects users with expertise in areas like web server
+                creation to professionals, students, or employers with relevant
+                skills. It also helps find like-minded individuals for
+                collaborative projects. Unlike similar platforms, Querit
+                integrates these features into one space, promoting mutual
+                learning and connection. With personalized profiles, threaded
+                discussions, and strong content moderation, Querit fosters idea
+                exchange, engaging discussions, and collaboration.
+              </p>
+              <a href="https://querit.onrender.com/">Try it</a>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-people-group"></i>
+              <h2>Cyclops : Where Vision Meets Strength</h2>
+              <p>
+                Cyclops is a powerful software platform built on the MERN stack,
+                designed for project management, bug tracking, and version
+                control. It features tools like Gantt charts, Kanban boards,
+                dashboards, and issue tracking, supporting Agile, Scrum, and
+                Waterfall methodologies. With real-time updates and external app
+                integrations, Cyclops offers a secure, intuitive solution for
+                startups, SMEs, freelancers, and remote teams to manage projects
+                efficiently.
+              </p>
+              <a href="https://cyclopswebapp.netlify.app/login">Try it</a>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-file-code"></i>
+              <h2>FileVault : Secure, Manage, Share</h2>
+              <p>
+                FileVault is a secure app for storing, managing, and sharing
+                files and notes. It supports various file formats, including
+                images, PDFs, and multimedia, all stored locally for offline
+                access. With strong password protection, file categorization,
+                and easy sharing, FileVault ensures data security. It also
+                offers a help section and file deletion options, making it a
+                comprehensive solution for secure file management.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- -------------Interships And Certifications----------- -->
+      <div id="internship">
+        <div class="container">
+          <h1 class="sub-title">Interships And Certifications</h1>
+          <div class="work-list">
+            <div class="work">
+              <div class="layer">
+                <h3>Full Stack Web Development</h3>
+                <h4>Diginique TechLabs & iHUB DivyaSampark at IIT Roorkee</h4>
+                <p>
+                  Completed a Full Stack Web Development internship, gaining
+                  hands-on experience and mentorship, and ready to apply these
+                  skills in future projects.
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/1kReanzCIcRDN0pCh9hWItQGwqzh4BIX8/view?usp=sharing"
+                  ><i class="fa-solid fa-clipboard-user"></i
+                ></a>
+              </div>
+            </div>
+            <div class="work">
+              <div class="layer">
+                <h3>Machine Learning - Using Python</h3>
+                <h4>SimpliLearn</h4>
+                <p>
+                  Certified in Machine Learning with Python, specializing in
+                  algorithms, data analysis, and Python programming, ready to
+                  apply these skills professionally.
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/1AWOnoLtTJoE5Zk8TR8Bgn8li14CEU621/view?usp=sharing"
+                  ><i class="fa-solid fa-up-right-from-square"></i
+                ></a>
+              </div>
+            </div>
+            <div class="work">
+              <div class="layer">
+                <h3>AWS Academy Cloud Foundations</h3>
+                <h4>Amazon Web Services Training And Certification</h4>
+                <p>
+                  Completed a course in Amazon Cloud Foundation, covering AWS
+                  cloud concepts, services, architecture, and security, eager to
+                  advance in cloud computing.
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/10glLQW4kCj481kppLFD2aGIuWqHQRwst/view?usp=sharing"
+                  ><i class="fa-solid fa-up-right-from-square"></i
+                ></a>
+              </div>
+            </div>
+            <div class="work">
+              <div class="layer">
+                <h3>HTML5 - The Language</h3>
+                <h4>Infosys</h4>
+                <p>
+                  Completed a course in HTML5 application development, acquiring
+                  essential skills for building dynamic and interactive web
+                  applications.
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/19dtnfGxzqXzWS-KLirm459I99a9Uabx7/view?usp=sharing"
+                  ><i class="fa-solid fa-up-right-from-square"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="work">
+              <div class="layer">
+                <h3>Basics of Python</h3>
+                <h4>Infosys</h4>
+                <p>
+                  Successfully Completed a course in Python basics, gaining
+                  fundamental skills in Python programming for various
+                  applications.
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/1f75D2Clblu0EyFA_PQu6aKpepEAnDFNi/view?usp=sharing"
+                  ><i class="fa-solid fa-up-right-from-square"></i
+                ></a>
+              </div>
+            </div>
+            <div class="work">
+              <div class="layer">
+                <h3>Trends in Cybersecurity</h3>
+                <h4>Infosys</h4>
+                <p>
+                  Completed a course covering emerging threats, defense
+                  strategies, and evolving technologies in cybersecurity.
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/1Q-h-IuYxGTutthR1cwJfKa74CMf6-WDu/view?usp=sharing"
+                  ><i class="fa-solid fa-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- -------------Skills----------- -->
+      <div id="skills">
+        <div class="container">
+          <h1 class="sub-title">Skills</h1>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">HTML</li>
+            <li class="skills__list-item btn btn--plain">CSS</li>
+            <li class="skills__list-item btn btn--plain">JavaScript</li>
+            <li class="skills__list-item btn btn--plain">React</li>
+            <li class="skills__list-item btn btn--plain">Android Studio</li>
+            <li class="skills__list-item btn btn--plain">Python</li>
+            <li class="skills__list-item btn btn--plain">Machine Learning</li>
+            <li class="skills__list-item btn btn--plain">Java</li>
+            <li class="skills__list-item btn btn--plain">GitHub</li>
+            <li class="skills__list-item btn btn--plain">DSA</li>
+            <li class="skills__list-item btn btn--plain">Microsoft Office</li>
+            <li class="skills__list-item btn btn--plain">MySQL</li>
+            <li class="skills__list-item btn btn--plain">NoSQL</li>
+            <li class="skills__list-item btn btn--plain">MongoDB</li>
+            <li class="skills__list-item btn btn--plain">Node.js</li>
+            <li class="skills__list-item btn btn--plain">Colab</li>
+            <li class="skills__list-item btn btn--plain">Jupyter Notebook</li>
+            <li class="skills__list-item btn btn--plain">AWS</li>
+            <li class="skills__list-item btn btn--plain">GCP</li>
+            <li class="skills__list-item btn btn--plain">Canva</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- -------------Contacts----------- -->
+      <div id="contacts">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+              <h1 class="sub-title">Contact</h1>
+              <div class="social-icons">
+                <a href="https://github.com/Shubhijain03"
+                  ><i class="fa-brands fa-square-github"></i> Github</a
+                >
+                <a href="https://www.linkedin.com/in/shubhijain03/"
+                  ><i class="fa-brands fa-linkedin"></i> Linkedin</a
+                >
+                <a href="shubhij0307@gmail.com"
+                  ><i class="fa-solid fa-envelope"></i> Email</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-right">
+              <div class="resume">
+                <a
+                  href="https://drive.google.com/file/d/1UCHN2YCaOgczDIsz7lwurTp9DIW95IEX/view?usp=sharing"
+                  ><i class="fa-solid fa-file"></i> Resume</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>Let's Work Together!</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname, event) {
+        for (let tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+
+        for (let tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+    <script>
+      window.onload = function () {
+        const homeSection = document.getElementById("header");
+        if (homeSection) {
+          homeSection.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+    </script>
+
+    <script>
+      var sidemeu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemeu.style.right = "0";
+      }
+      function closemenu() {
+        sidemeu.style.right = "-200px";
+      }
+    </script>
   </body>
 </html>
