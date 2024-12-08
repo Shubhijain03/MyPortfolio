@@ -91,6 +91,16 @@ nav{
     bottom: -6px;
     transition: width 0.5s ease;
 }
+#sidemenu2 {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s;
+}
+
+#sidemenu2.visible {
+    opacity: 1;
+    visibility: visible;
+}
 
 nav ul li a:hover::after {
     width: 100%;
@@ -112,6 +122,19 @@ nav ul li a:hover::after {
     transform: translateY(50px); 
     animation: slideUp 1.5s ease-out forwards;} */
 }
+#dynamicText{
+       color:#960018;
+        background-color: #bcb8b8;
+        padding: 8px 12px; 
+        border-radius: 10px; 
+        width: 192px; 
+        height: 50px; 
+        font-weight:800;
+        display: flex;
+        overflow: hidden; /* Prevent overflow */
+        white-space: nowrap; /* Prevent wrapping */
+        box-sizing: border-box; /* Ensure padding fits */
+}
 
 .header-text h1{
     font-size: 4rem;
@@ -119,7 +142,7 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span{
-   color:#bf0038; 
+   color:#960018;
    cursor: url('images/cursor.png') 4 4 ,auto;
 }
 
@@ -398,6 +421,9 @@ nav ul li a:hover::after {
   }
 
 /*-------------Contact----------- */
+   #contacts{
+    background: linear-gradient(to bottom, #080808 0%, #1a1a1a 100%);
+   }
   .contact-left{
     flex-basis: 55%;
   }
@@ -455,7 +481,7 @@ nav ul li a:hover::after {
     font-weight: 700; 
   }
   
-  .copyright{
+  .copyright {
     width:100%;
     text-align:center;
     padding: 10px 0;
@@ -463,6 +489,14 @@ nav ul li a:hover::after {
     font-weight: 500;
     margin-top:18px;
   }
+/* -------------This will direct to header container-----------
+.copyright .arrow{
+    position:absolute;
+    right:10px;
+    width:40px;
+    height:40px;
+    margin-bottom: -2%;
+} */
 /*-------------scrollable container----------- */
  ::-webkit-scrollbar {
     width: 12px;
@@ -502,7 +536,7 @@ nav ul li a:hover::after {
         font-size: 25px;
     }
     nav ul{
-        background:#bf0038;
+        background:linear-gradient(rgba(0,0,0,1),#bf0038);
         position:fixed;
         top:0;
         right:-150px;
@@ -514,7 +548,7 @@ nav ul li a:hover::after {
     } 
     nav ul li{
         display:block;
-        margin:25px;
+        margin:24px;
     }
     nav ul .fa-solid{
        position:absolute;
@@ -550,6 +584,7 @@ nav ul li a:hover::after {
     .social-icons a{
         font-size: 22px;
     }
+
 
   }
   

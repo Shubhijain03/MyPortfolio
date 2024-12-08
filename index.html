@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="nav-div">
-      <nav>
+      <nav id="sidemenu2">
         <p>{SJ}.</p>
         <ul id="sidemenu">
           <li><a href="#header">Home</a></li>
@@ -33,9 +33,9 @@
         <div class="container">
           <div class="heading">
             <div class="header-text">
-              <p class="slide-up">Web-Developer</p>
+              <p class="slide-up" id="dynamicText">Web-Developer</p>
               <h1 class="slide-up">
-                I'm <span>Shubhi Jain </span><br />
+                Hi, I'm <span>Shubhi Jain </span><br />
                 from Bengaluru
               </h1>
             </div>
@@ -320,6 +320,7 @@
         </div>
         <div class="copyright">
           <p>Let's Work Together!</p>
+          <!-- <img class="arrow" src="images/up-arrow.png" /> -->
         </div>
       </div>
     </div>
@@ -359,6 +360,64 @@
       function closemenu() {
         sidemeu.style.right = "-200px";
       }
+    </script>
+    <script>
+      // Show the sidemenu after 1.5 seconds
+      setTimeout(() => {
+        const sidemenu = document.getElementById("sidemenu2");
+        sidemenu.classList.add("visible");
+      }, 1500);
+    </script>
+    <script>
+      const textElement = document.getElementById("dynamicText");
+      const texts = ["Data Analyst", "UI/UX Designer", "App Developer"]; // New texts to display
+      let currentText = "Web Developer"; // Initially displayed text
+      let index = 0; // Index of the current text
+      let charIndex = currentText.length; // Start deleting from the last character
+
+      function deleteInitialText() {
+        if (charIndex > 0) {
+          // Remove one character at a time
+          currentText = currentText.slice(0, -1);
+          textElement.textContent = currentText;
+          charIndex--;
+          setTimeout(deleteInitialText, 100); // Speed for initial backspace
+        } else {
+          // After deleting initial text, start the typing animation
+          setTimeout(typeText, 500); // Delay before typing starts
+        }
+      }
+
+      function typeText() {
+        if (charIndex < texts[index].length) {
+          // Add one character at a time
+          currentText += texts[index][charIndex];
+          textElement.textContent = currentText;
+          charIndex++;
+          setTimeout(typeText, 100); // Typing speed
+        } else {
+          // Start deleting after a short delay
+          setTimeout(deleteText, 3000);
+        }
+      }
+
+      function deleteText() {
+        if (charIndex > 0) {
+          // Remove one character at a time
+          currentText = currentText.slice(0, -1);
+          textElement.textContent = currentText;
+          charIndex--;
+          setTimeout(deleteText, 100); // Deleting speed
+        } else {
+          // Move to the next text after deletion
+          index = (index + 1) % texts.length; // Loop through texts
+          charIndex = 0; // Reset charIndex for next text
+          setTimeout(typeText, 500); // Delay before typing the next text
+        }
+      }
+
+      // Start the deletion of initial text after 2 seconds
+      setTimeout(deleteInitialText, 3000);
     </script>
   </body>
 </html>
