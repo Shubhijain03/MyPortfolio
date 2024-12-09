@@ -41,8 +41,7 @@ function createImage(x, y) {
   // Create a new image element
   const img = document.createElement("img");
   img.src = getRandomImageSource();
-  img.alt = "Random Image";
-
+  
   // Set image position and z-index to ensure it's on top
   img.style.left = `${x + LEFT_MARGIN}px`;
   img.style.top = `${y}px`;
