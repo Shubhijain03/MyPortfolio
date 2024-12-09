@@ -591,6 +591,15 @@ nav ul li a:hover::after {
     .work-list{
         grid-template-columns:repeat(auto-fit,minmax(300px ,1fr));
     }
+    .skills__list {
+        grid-template-columns:repeat(auto-fit,minmax(100px ,1fr));
+        margin-top:20px; 
+      }
+      
+      .skills__list-item {
+        padding: 8px 10px;
+        font-size: 12px;     
+      }
     .contact-left,.contact-right{
         flex-basis: 100%;
     }
