@@ -564,7 +564,7 @@ nav ul li a:hover::after {
         width:150px;
         height:54vh;
         padding-top:50px;
-        z-index: 2;
+        z-index: 20;
         transition:right 0.5s;
     } 
     nav ul li{
