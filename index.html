@@ -13,7 +13,7 @@
   <body>
     <div class="nav-div">
       <nav id="sidemenu2">
-        <p>{SJ}.</p>
+        <img class="logo" src="images/logo4.png" />
         <ul id="sidemenu">
           <li><a href="#header">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -33,11 +33,11 @@
         <div class="container">
           <div class="heading">
             <div class="header-text">
-              <p class="slide-up" id="dynamicText">Web-Developer</p>
               <h1 class="slide-up">
-                Hi, I'm <span>Shubhi Jain </span><br />
+                I'm <span>Shubhi Jain </span><br />
                 from Bengaluru
               </h1>
+              <p class="slide-up" id="dynamicText">Web-Developer</p>
             </div>
           </div>
         </div>
@@ -311,8 +311,9 @@
             <div class="contact-right">
               <div class="resume">
                 <a
+                  id="resume-link"
                   href="https://drive.google.com/file/d/1UCHN2YCaOgczDIsz7lwurTp9DIW95IEX/view?usp=sharing"
-                  ><i class="fa-solid fa-file"></i> Resume</a
+                  ><i class="fa-solid fa-file"></i> Download Resume</a
                 >
               </div>
             </div>
@@ -418,6 +419,20 @@
 
       // Start the deletion of initial text after 2 seconds
       setTimeout(deleteInitialText, 3000);
+    </script>
+    <script>
+      // Toggle "Download Resume" and "Download CV" continuously
+      const resumeLink = document.getElementById("resume-link");
+      const resumeTexts = ["Download Resume", "Download CV"];
+      let resumeIndex = 0;
+
+      function toggleResumeText() {
+        resumeIndex = (resumeIndex + 1) % resumeTexts.length; // Switch between 0 and 1
+        resumeLink.innerHTML = `<i class="fa-solid fa-file"></i> ${resumeTexts[resumeIndex]}`;
+      }
+
+      // Start toggling every 2 seconds
+      setInterval(toggleResumeText, 2000);
     </script>
   </body>
 </html>
