@@ -355,33 +355,47 @@
     </script>
 
     <script>
-      var sidemenu = document.getElementById("sidemenu");
+      document.addEventListener("DOMContentLoaded", function () {
+        var sidemenu = document.getElementById("sidemenu");
 
-      // Open the menu
-      function openmenu() {
-        sidemenu.style.right = "0";
-        // Add event listener to close the menu when clicking outside
-        document.addEventListener("click", handleOutsideClick);
-      }
-
-      // Close the menu
-      function closemenu() {
-        sidemenu.style.right = "-200px";
-        // Remove event listener to avoid unnecessary checks
-        document.removeEventListener("click", handleOutsideClick);
-      }
-
-      // Close the menu if clicking outside
-      function handleOutsideClick(event) {
-        // Check if the click is outside the sidemenu
-        if (
-          !sidemenu.contains(event.target) &&
-          event.target.id !== "fa-solid-fa-bars"
-        ) {
-          closemenu();
+        // Open the menu
+        function openmenu() {
+          sidemenu.style.right = "0";
+          // Add event listener to close the menu when clicking outside
+          document.addEventListener("click", handleOutsideClick);
         }
-      }
+
+        // Close the menu
+        function closemenu() {
+          sidemenu.style.right = "-200px";
+          // Remove event listener to avoid unnecessary checks
+          document.removeEventListener("click", handleOutsideClick);
+        }
+
+        // Close the menu if clicking outside
+        function handleOutsideClick(event) {
+          // Check if the click is outside the sidemenu
+          if (
+            !sidemenu.contains(event.target) &&
+            event.target.id !== "fa-solid-fa-bars"
+          ) {
+            closemenu();
+          }
+        }
+
+        // Close the menu when an option inside the sidemenu is clicked
+        sidemenu.addEventListener("click", function (event) {
+          if (event.target.tagName === "A") {
+            closemenu();
+          }
+        });
+
+        // Attach functions to the global scope (to make them accessible in HTML attributes)
+        window.openmenu = openmenu;
+        window.closemenu = closemenu;
+      });
     </script>
+
     <script>
       // Show the sidemenu after 1.5 seconds
       setTimeout(() => {
