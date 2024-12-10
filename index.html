@@ -23,7 +23,11 @@
           <li><a href="#contacts">Contact</a></li>
           <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
         </ul>
-        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        <i
+          class="fa-solid fa-bars"
+          id="fa-solid-fa-bars"
+          onclick="openmenu()"
+        ></i>
       </nav>
     </div>
     <div class="scroll-container">
@@ -279,9 +283,7 @@
             <li class="skills__list-item btn btn--plain">MySQL</li>
             <li class="skills__list-item btn btn--plain">NoSQL</li>
             <li class="skills__list-item btn btn--plain">MongoDB</li>
-            <li class="skills__list-item btn btn--plain">Node.js</li>
-            <li class="skills__list-item btn btn--plain">Colab</li>
-            <li class="skills__list-item btn btn--plain">Jupyter Notebook</li>
+            <li class="skills__list-item btn btn--plain">Nodejs</li>
             <li class="skills__list-item btn btn--plain">AWS</li>
             <li class="skills__list-item btn btn--plain">GCP</li>
             <li class="skills__list-item btn btn--plain">Canva</li>
@@ -353,13 +355,31 @@
     </script>
 
     <script>
-      var sidemeu = document.getElementById("sidemenu");
+      var sidemenu = document.getElementById("sidemenu");
 
+      // Open the menu
       function openmenu() {
-        sidemeu.style.right = "0";
+        sidemenu.style.right = "0";
+        // Add event listener to close the menu when clicking outside
+        document.addEventListener("click", handleOutsideClick);
       }
+
+      // Close the menu
       function closemenu() {
-        sidemeu.style.right = "-200px";
+        sidemenu.style.right = "-200px";
+        // Remove event listener to avoid unnecessary checks
+        document.removeEventListener("click", handleOutsideClick);
+      }
+
+      // Close the menu if clicking outside
+      function handleOutsideClick(event) {
+        // Check if the click is outside the sidemenu
+        if (
+          !sidemenu.contains(event.target) &&
+          event.target.id !== "fa-solid-fa-bars"
+        ) {
+          closemenu();
+        }
       }
     </script>
     <script>
