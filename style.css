@@ -121,9 +121,6 @@ nav ul li a:hover::after {
     top:50%;
     left:50%;
     transform: translate(-50%,-50%); 
-    /* opacity:0;
-    transform: translateY(50px); 
-    animation: slideUp 1.5s ease-out forwards;} */
 }
 #dynamicText{
        color:#960018;
@@ -542,6 +539,10 @@ nav ul li a:hover::after {
 
 
 /*-------------css for small screens----------- */ 
+.header-text{   
+    top:60%;
+   
+}
   nav .fa-solid{
     display:none;
   }
